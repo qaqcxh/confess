@@ -1,0 +1,109 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<meta name="title" content="小孙同学">
+	<meta name="github" content="https://github.com/sun0225SUN/Awesome-Love-Code">
+	<meta name="describe" content="收集不易，您的star是我坚持的动力，同时也欢迎各位PR哦! ">
+	<link rel="icon" type="image/x-icon" href="https://cdn.jsdelivr.net/gh/sun0225SUN/photos/img/20210715233345.png">
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<style type="text/css">
+		@font-face {
+			font-family: digit;
+			src: url('digital.ttf') format("truetype");
+		}
+	</style>
+	<link href="css/default.css" type="text/css" rel="stylesheet">
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/garden.js"></script>
+	<script type="text/javascript" src="js/functions.js"></script>
+</head>
+
+<body>
+	<div id="mainDiv">
+		<div id="content">
+			<div id="code">
+				<span class="comments">##</span><br />
+				<span class="comments"># 喵喵猫~</span><br />
+				<span class="comments"># 笨蛋清与傻瓜海在一起了呢！那么就用程序员的方式浅浅纪念一下吧:)</span><br />
+				<span class="comments">##</span><br />
+				i = Boy(<span class="string">"小海"</span>);<br />
+				u = Girl(<span class="string">"小清"</span>);<br />
+				<span class="comments"># 2024.3.2， 我们互加微信，爱情的齿轮开始转动。 </span><br />
+				i.wechat(u)<br />
+				<span class="comments"># 2024.4.4-5， 我们在长沙第一次相见. (水獭好可爱，带编制的乳猪真享受，开福寺真灵！ </span><br />
+				i.meet(u)<br />
+				<span class="comments"># 从那之后，我们每天都会互相分享生活（城堡积木真难拼，当伴娘的清宝真像一只小松鼠）。一起聊天的日子充满了愉悦呢！</span><br />
+				happy(u, i)<br />
+				<span class="comments"># 当然，我们也会遇到生活中的各种emo小怪兽。</span><br />
+				fightEmo(u, i)<br />
+				<span class="comments"># 但好在我们都是对方的最佳战友呢！</span><br />
+				help(u, i)<br />	
+				<span class="comments"># 一起交往的日子，我们的感情变得越来越坚定。</span><br />
+				u.in_harmony_with(i) <br />
+				i.in_harmony_with(u) <br />
+				<span class="comments"># 2024.5.17-19，我们再次在长沙相遇。而这次，我们不再是孤独的两人，而是携手向前的伙伴了呢！</span><br />
+				i.confess(u) <br />
+				<span class="comments"># 第一次和你去听live house，第一次和你逛宜家，第一次和你养老按摩... 生活的乐趣越来越多！</span><br />
+				appoint(u, i)<br />
+				<span class="comments"># 我确信，在一起，我们会更幸福！</span><br />
+				while <span class="keyword">True</span>:<br />
+				<span class="placeholder"></span><span class="keyword">if</span> u.with(i):<br />
+				<span class="placeholder"></span><span class="placeholder"></span>u = everything<br />
+				<span class="placeholder"></span><span class="keyword">else</span>:<br />
+				<span class="placeholder"></span><span class="placeholder"></span>everything = u<br />
+				<span class="comments"># 故事未完待续... 让我们一起书写未来吧</span> FightMonsters(u, i)<br />
+			</div>
+			<div id="loveHeart">
+				<canvas id="garden"></canvas>
+				<div id="words">
+					<div id="messages">
+						小海与小清相爱了
+						<div id="elapseClock"></div>
+					</div>
+					<div id="loveu">
+						you are my sunshine.<br />
+						<div class="signature"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+		var offsetX = $("#loveHeart").width() / 2;
+		var offsetY = $("#loveHeart").height() / 2 - 55;
+		var together = new Date();
+		// 此处月份介于 0 ~ 11 之间。用本地时间表示，如 8 月要用 7 表示。
+		together.setFullYear(2024, 4, 18);
+		together.setHours(23);
+		together.setMinutes(28);
+		together.setSeconds(0);
+		together.setMilliseconds(0);
+
+		if (!document.createElement('canvas').getContext) {
+			var msg = document.createElement("div");
+			msg.id = "errorMsg";
+			msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+";
+			document.body.appendChild(msg);
+			$("#code").css("display", "none")
+			$("#copyright").css("position", "absolute");
+			$("#copyright").css("bottom", "10px");
+			document.execCommand("stop");
+		} else {
+			setTimeout(function () {
+				startHeartAnimation();
+			}, 5000);
+
+			timeElapse(together);
+			setInterval(function () {
+				timeElapse(together);
+			}, 500);
+
+			adjustCodePosition();
+			$("#code").typewriter();
+		}
+	</script>
+</body>
+
+</html>
